@@ -1,7 +1,7 @@
 {
   "name": "nodejs-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Nodejs Server Practice",
   "homepage": "https://github.com/mm-kanemaru/nodejs-server#readme",
   "bugs": {
     "url": "https://github.com/mm-kanemaru/nodejs-server/issues"
@@ -11,9 +11,9 @@
     "url": "git+https://github.com/mm-kanemaru/nodejs-server.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "chanriok",
   "type": "module",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
