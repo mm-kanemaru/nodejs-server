@@ -34,13 +34,17 @@ app.use(express.json());
 
 app.post('/users', (req, res) => {
   const {name} = req.body;
-  
+
   if (!name || typeof name !== 'string') {
-    return res.status(400).json({"error": "Name is required and must be a string"});
-  }
-
+    return res.status(400).json({error: 'Name is required and must be a string'});
+  } 
+  
+  if (feMemberList.some(member => member.name === name)) {
+    return res.status(400).json({error: `${name} already exists in feMemberList`});
+  } 
+  
+  feMemberList.push({name: name});
   // Return the added user name
-  res.json({name: name});
+  res.json({name: name}); 
 });
-
 
